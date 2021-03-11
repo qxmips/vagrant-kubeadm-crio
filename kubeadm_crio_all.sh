@@ -44,3 +44,4 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sed  -i  '/^cgroup_manager\s=\s/ s/systemd/cgroupfs/' /etc/crio/crio.conf
 sed  -i  '/^conmon_cgroup\s=\s/ s/system\.slice/pod/' /etc/crio/crio.conf
 sudo systemctl restart crio
+sudo systemctl enable crio
